@@ -1,11 +1,25 @@
 package models;
 
 public class MedicalDevices {
-    private String name;
+
     private String company;
-    private String typeOfSurgery;
-    private int id;
-    private int qty;
     private int price;
 
+
+
+    public void setCompany(String company){
+        this.company = company;
+    }
+
+    public String getCompany(){
+        return this.company;
+    }
+
+
+    public void setPrice(Integer price){
+        this.price=price;
+    }
+    public Integer getPrice(){
+        return price;
+    }
 }

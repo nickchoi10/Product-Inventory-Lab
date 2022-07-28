@@ -1,11 +1,29 @@
 package models;
 
 public class Sneakers {
-    private int id;
+
     private String name;
-    private String brand;
     private String sport;
-    private int size;
-    private int qty;
-    private float price;
+    private Integer price;
+
+
+    public void setName(String name){
+        this.name = name;
+    }
+    public String getName(){
+        return this.name;
+    }
+    public void setSport(String sport){
+        this.sport = sport;
+    }
+    public String getSport(){
+        return this.sport;
+    }
+
+    public void setPrice(Integer price){
+        this.price = price;
+    }
+    public Integer getPrice(){
+        return this.price;
+    }
 }
