@@ -1,34 +1,43 @@
 package models;
 
 public class Sneakers {
-
+    private int Id;
     private String name;
     private String sport;
-    private Integer price;
+    private int price;
 
-    public Sneakers(String name, String sport, Integer price){
+    public Sneakers(){
+
+    }
+
+    public Sneakers(int Id, String name, String sport, int price){
+        this.Id = Id;
         this.name = name;
         this.sport = sport;
         this.price=price;
     }
 
+    public void setId(int id){ this.Id = id;}
+    public Integer getId(){ return Id;}
     public void setName(String name){
         this.name = name;
     }
+
     public String getName(){
-        return this.name;
+        return name;
     }
     public void setSport(String sport){
         this.sport = sport;
     }
+
     public String getSport(){
-        return this.sport;
+        return sport;
     }
 
-    public void setPrice(Integer price){
+    public void setPrice(int price){
         this.price = price;
     }
-    public Integer getPrice(){
+    public int getPrice(){
         return this.price;
     }
 }

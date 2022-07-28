@@ -1,5 +1,6 @@
 package models;
 
+import com.sun.javafx.image.IntPixelGetter;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -8,7 +9,7 @@ public class SneakersTest {
     public void setNameTest(){
         String expected = "airjordans";
 
-        Sneakers testSneaker = new Sneakers(null,null,null);
+        Sneakers testSneaker = new Sneakers(1,null,null,1);
         testSneaker.setName(expected);
 
         Assert.assertEquals(expected,testSneaker.getName());
@@ -18,7 +19,7 @@ public class SneakersTest {
     public void setSportTest(){
         String expected = "basketball";
 
-        Sneakers testSneaker = new Sneakers(null,null,null);
+        Sneakers testSneaker = new Sneakers(1,null,null,1);
         testSneaker.setSport(expected);
 
         Assert.assertEquals(expected,testSneaker.getSport());
@@ -26,9 +27,9 @@ public class SneakersTest {
 
     @Test
     public void setPriceTest(){
-        Integer expected = 100;
+        int expected = 100;
 
-        Sneakers testSneaker = new Sneakers(null,null,null);
+        Sneakers testSneaker = new Sneakers(1,null,null,1);
         testSneaker.setPrice(expected);
 
         Assert.assertEquals(expected,testSneaker.getPrice());
@@ -36,15 +37,17 @@ public class SneakersTest {
 
     @Test
     public void ConstructorTest(){
-        Integer expectedPrice =100;
+        int expectedPrice =100;
         String expectedName= "Dunk Lows";
         String expectedSport = "CasualWear";
+        Integer expectedId = 1;
 
-        Sneakers constructor = new Sneakers(expectedName,expectedSport, expectedPrice);
+        Sneakers constructor = new Sneakers(expectedId,expectedName,expectedSport, expectedPrice);
 
         Assert.assertEquals(expectedPrice, constructor.getPrice());
         Assert.assertEquals(expectedName, constructor.getName());
         Assert.assertEquals(expectedSport, constructor.getSport());
+        Assert.assertEquals(expectedId, constructor.getId());
 
 
     }
