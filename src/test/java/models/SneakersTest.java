@@ -8,7 +8,7 @@ public class SneakersTest {
     public void setNameTest(){
         String expected = "airjordans";
 
-        Sneakers testSneaker = new Sneakers();
+        Sneakers testSneaker = new Sneakers(null,null,null);
         testSneaker.setName(expected);
 
         Assert.assertEquals(expected,testSneaker.getName());
@@ -18,7 +18,7 @@ public class SneakersTest {
     public void setSportTest(){
         String expected = "basketball";
 
-        Sneakers testSneaker = new Sneakers();
+        Sneakers testSneaker = new Sneakers(null,null,null);
         testSneaker.setSport(expected);
 
         Assert.assertEquals(expected,testSneaker.getSport());
@@ -28,13 +28,26 @@ public class SneakersTest {
     public void setPriceTest(){
         Integer expected = 100;
 
-        Sneakers testSneaker = new Sneakers();
+        Sneakers testSneaker = new Sneakers(null,null,null);
         testSneaker.setPrice(expected);
 
         Assert.assertEquals(expected,testSneaker.getPrice());
     }
 
+    @Test
+    public void ConstructorTest(){
+        Integer expectedPrice =100;
+        String expectedName= "Dunk Lows";
+        String expectedSport = "CasualWear";
 
+        Sneakers constructor = new Sneakers(expectedName,expectedSport, expectedPrice);
+
+        Assert.assertEquals(expectedPrice, constructor.getPrice());
+        Assert.assertEquals(expectedName, constructor.getName());
+        Assert.assertEquals(expectedSport, constructor.getSport());
+
+
+    }
 
 
 

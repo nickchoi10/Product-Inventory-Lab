@@ -5,7 +5,10 @@ public class MedicalDevices {
     private String company;
     private int price;
 
-
+    public MedicalDevices(String company, int price){
+        this.company= company;
+        this.price= price;
+    }
 
     public void setCompany(String company){
         this.company = company;
